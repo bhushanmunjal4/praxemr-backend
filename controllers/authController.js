@@ -158,7 +158,19 @@ const login = async (req, res) => {
         expiryDate: row.expiry_date,
       });
 
-      res.json({ success: true, user: row });
+      res.json({
+        success: true,
+        user: {
+          username: row.username,
+          doctorName: row.doctor_name,
+          speciality: row.speciality,
+          clinicName: row.clinic_name,
+          clinicPhone: row.clinic_phone,
+          clinicAddress: row.clinic_address,
+          licenseType: row.license_type,
+          expiryDate: row.expiry_date,
+        },
+      });
     }
   );
 };
