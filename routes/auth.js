@@ -4,7 +4,7 @@ const {
   login,
   logout,
   getAuthStatus,
-} = require("../../controllers/authController.js");
+} = require("../controllers/authController");
 
 router.post("/login", login);
 router.post("/logout", logout);

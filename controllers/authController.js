@@ -1,10 +1,6 @@
 const bcrypt = require("bcrypt");
-const { getDatabase } = require("../praxemr/utils/database");
-const {
-  saveLicense,
-  loadLicense,
-  deleteLicense,
-} = require("../praxemr/utils/license");
+const { getDatabase } = require("../utils/database");
+const { saveLicense, loadLicense, deleteLicense } = require("../utils/license");
 
 const TRIAL_DAYS = 30;
 
