@@ -9,7 +9,10 @@ app.use(express.json());
 
 // Import routes
 const authRoutes = require("./routes/auth");
+const adminRoutes = require("./routes/adminRoutes");
+
 app.use("/api/auth", authRoutes);
+app.use("/api/admin", adminRoutes);
 
 // Simple health check
 app.get("/api/health", (req, res) => res.json({ ok: true }));
